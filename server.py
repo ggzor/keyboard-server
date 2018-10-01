@@ -47,6 +47,7 @@ with open('template.html') as r, open('index.html', 'w') as w:
         w.write(l)
 
 if __name__ == '__main__':
+    print('\033[32;1m * Connect to http://{}:{}/\033[0m'.format(ip, port))
     if sys.platform.startswith('linux'):
         os.system('sudo iptables -I INPUT -p tcp --dport {} -j ACCEPT'.format(port))
     app.run(host='0.0.0.0', port=port)
