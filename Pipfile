@@ -4,8 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+pynput = "*"
+flask = "*"
+flask-restful = "*"
+pyopenssl = "*"
 
 [dev-packages]
+pylint = "*"
 
 [requires]
 python_version = "3.7"
